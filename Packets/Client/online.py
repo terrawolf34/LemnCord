@@ -4,7 +4,7 @@ import websocket
 import requests
 import os
 
-#trying websockets to see if better than requests (they arent...) and also username,discrim,uid is broken so use ur own value :)
+# username uid and discrim currently dont worky 
 
 status = "online"
 token = ""
