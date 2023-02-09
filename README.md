@@ -2,7 +2,7 @@
 uhh kind of a discord ""client"" written in python,doing this for learning pourposes,probably not gonna turn into something useful
 
 # How to run
-pip install requests
+pip install requests websocket_client
 
 python3 menu.py
 
