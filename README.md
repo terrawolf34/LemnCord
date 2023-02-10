@@ -8,5 +8,7 @@ python3 menu.py
 
 you will also need to put usertoken in bruh.py !
 
+to exit do CTRL-C
+
 # Can i see the source and use it?
 feel free to do so.
