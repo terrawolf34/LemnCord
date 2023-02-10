@@ -10,4 +10,4 @@ def join(token, server_invite):
     
 join(token, input("invite? discord.gg/"))
 
-#make sure your disc account has phone num else you risk locking it!
+#make sure your disc account has phone num else you risk locking it! (use quackr а почему бы и нет)
