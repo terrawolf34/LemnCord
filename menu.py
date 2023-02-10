@@ -45,7 +45,7 @@ while True:
         os.chdir(root_directory)
         
     if menu == 'leave server':
-    	os.chdir(client_directory)
+    	os.chdir(server_directory)
     	os.system('python3 leave_server.py')
     	os.chdir(root_directory)
     	
