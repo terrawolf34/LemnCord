@@ -5,19 +5,35 @@ sys.path.append("../..")
 from bruh import token
 
 
-id = input("channel id?")
-def retrieve_messages(channelid):
-    num=0
-    headers = {
-        'authorization': token
-    }
-    r = requests.get(
-        f'https://discord.com/api/v9/channels/{channelid}/messages?limit=100',headers=headers #limit = amount of messages taken
-        )
-    jsonn = json.loads(r.text)
-    for value in jsonn:
-        print(value['content'], '\n')
-        num=num+1
-    print('number of messages we collected is',num)
 
-retrieve_messages(f'{id}')
+headers = {
+    "Authorization": token
+}
+
+def get_user(user_id):
+    response = requests.get(f"https://discord.com/api/v6/users/{user_id}", headers=headers)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return None
+
+def get_channel_messages(channel_id):
+    response = requests.get(f"https://discord.com/api/v6/channels/{channel_id}/messages", headers=headers)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return None
+
+# Replace <CHANNEL_ID_HERE> with the actual ID of the Discord channel you want to retrieve messages from
+channel_id = input("What Channel should we get the messages from?")
+messages = get_channel_messages(channel_id)
+if messages:
+    print("Messages in this channel:")
+    for message in messages:
+        user = get_user(message["author"]["id"])
+        if user:
+            print(f"Username: {user['username']}#{user['discriminator']}, Message: {message['content']}")
+        else:
+            print(f"Username: (could not retrieve), Message: {message['content']}")
+else:
+    print("Could not retrieve messages. Check your token and try again.")
