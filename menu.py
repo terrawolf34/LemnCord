@@ -49,7 +49,7 @@ while True:
     	os.system('python3 leave_server.py')
     	os.chdir(root_directory)
 
-    if menu == 'srarki'
+    if menu == 'srarki':
         os.chdir(client_directory)
         os.system('python3 3.py')
         os.chdir(root_directory)
