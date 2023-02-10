@@ -10,7 +10,7 @@ client_directory = os.path.join(root_directory, "Packets/Client")
 server_directory = os.path.join(root_directory, "Packets/Server")
 
 while True:
-    menu = input('Command list:\nSend message/dm messagee - send dm/message \nGet message - get 100 messages\nJoin server/leave server - join server/leave server\nGo online - go online\nServer list/Channel list - get servers/channel list\nupload file - upload file\nEnter command: ')
+    menu = input('Command list:\nSend message/dm messagee - send dm/message \nGet message - get 100 messages\nJoin server/leave server - join server/leave server\nGo online - go online\nServer list/Channel list - get servers/channel list\nChange about me - change about me\nEnter command: ')
     if menu == 'send message':
         os.chdir(client_directory)
         os.system('python3 send_message.py')
@@ -42,7 +42,7 @@ while True:
         os.chdir(root_directory)
         
     if menu == 'leave server':
-    	os.chdir(client_directory)
+    	os.chdir(server_directory)
     	os.system('python3 leave_server.py')
     	os.chdir(root_directory)
     	
@@ -67,4 +67,9 @@ while True:
     if menu == "upload file":
         os.chdir(client_directory)
         os.system('python3 file_upload.py')
+        os.chdir(root_directory)
+        
+    if menu == "change about me":
+        os.chdir(client_directory)
+        os.system('python3 change_status.py')
         os.chdir(root_directory)
