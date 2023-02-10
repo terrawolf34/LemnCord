@@ -1,11 +1,15 @@
 import requests
 import json
+import sys
+sys.path.append("../..")
+from bruh import token
+
 
 id = input("channel id?")
 def retrieve_messages(channelid):
     num=0
     headers = {
-        'authorization': ''
+        'authorization': token
     }
     r = requests.get(
         f'https://discord.com/api/v9/channels/{channelid}/messages?limit=100',headers=headers #limit = amount of messages taken

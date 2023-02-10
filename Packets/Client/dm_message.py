@@ -1,5 +1,8 @@
 import requests
- 
+import sys
+sys.path.append("../..")
+from bruh import token
+
 def sendMessage(token, channel_id, message):
     url = 'https://discord.com/api/v8/channels/{}/messages'.format(channel_id)
     data = {"content": message}
@@ -22,7 +25,6 @@ def createDmChannel(token, user_id):
  
  
 #Change these variables
-token = ''
 user_id = input("userid? ")
 message = input("message? ")
  

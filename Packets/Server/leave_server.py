@@ -1,15 +1,15 @@
 import requests
+import sys
+sys.path.append("../..")
+from bruh import token
 
-# Define the user token
-token = ""
 
-# Define the Discord API endpoint for leaving a server
+
 endpoint = "https://discord.com/api/v6/users/@me/guilds/{guild_id}"
 
-# Replace `{guild_id}` with the ID of the server you want to leave
+
 endpoint = endpoint.format(guild_id=input("server id?"))
 
-# Set the headers for the API request
 headers = {
     "Authorization": "Bearer {}".format(token),
 }

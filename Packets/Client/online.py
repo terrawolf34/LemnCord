@@ -3,11 +3,14 @@ import time
 import websocket
 import requests
 import os
+import sys
+sys.path.append("../..")
+from bruh import token
 
-# username uid and discrim currently dont worky 
+
 
 status = "online"
-token = ""
+
 
 
 headers = {"Authorization": os.getenv("TOKEN"), "Content-Type": "application/json"}

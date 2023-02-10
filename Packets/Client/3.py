@@ -2,7 +2,7 @@ import time
 import colorama
 import random
 
-text = "sparky dai vam 3 rublei"
+text = "sparki dai mne 3 rublya"
 
 for i in range(2000):
 	colors = list(vars(colorama.Fore).values())

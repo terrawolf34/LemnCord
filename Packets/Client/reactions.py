@@ -1,7 +1,9 @@
 import requests
 import json
+import sys
+sys.path.append("../..")
+from bruh import token
 
-DISCORD_USER_TOKEN = ""
 
 
 MESSAGE_ID = input("message id? ")
@@ -16,7 +18,7 @@ url = f"https://discordapp.com/api/v6/channels/{CHANNEL_ID}/messages/{MESSAGE_ID
 
 
 headers = {
-    "Authorization": DISCORD_USER_TOKEN,
+    "Authorization": token,
 }
 
 # Send the API request to add a reaction to the message
