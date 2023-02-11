@@ -10,7 +10,7 @@ client_directory = os.path.join(root_directory, "Packets/Client")
 server_directory = os.path.join(root_directory, "Packets/Server")
 
 while True:
-    menu = input('Command list:\nSend message/dm message - send dm/message \nGet message/get dm message - get (dm) 100 messages\nJoin server/leave server - join server/leave server\nGo online - go online\nServer list/Channel list/Dm list - get servers/channel list/dm list\nChange about me - change about me\nEnter command: ')
+    menu = input('Command list:\nSend message/dm message - send dm/message \nGet message - get (dm) 100 messages\nJoin server/leave server - join server/leave server\nGo online - go online\nServer list/Channel list/Dm list - get servers/channel list/dm list\nChange about me - change about me\nEnter command: ')
     if menu == 'send message':
         os.chdir(client_directory)
         os.system('python3 send_message.py')
@@ -81,7 +81,4 @@ while True:
         os.chdir(root_directory)
         
         
-    if menu == "get dm message":
-        os.chdir(server_directory)
-        os.system('python3 get_dm_message.py')
-        os.chdir(root_directory)
+
