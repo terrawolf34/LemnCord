@@ -77,11 +77,11 @@ while True:
         
     if menu == "dm list":
         os.chdir(server_directory)
-        os.system('python3 get_channels.py')
+        os.system('python3 get_dm.py')
         os.chdir(root_directory)
         
         
     if menu == "get dm message":
         os.chdir(server_directory)
-        os.system('python3 get_channels.py')
+        os.system('python3 get_dm_message.py')
         os.chdir(root_directory)
