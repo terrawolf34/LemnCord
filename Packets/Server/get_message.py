@@ -5,7 +5,6 @@ sys.path.append("../..")
 from bruh import token
 
 
-
 headers = {
     "Authorization": token
 }
@@ -23,13 +22,11 @@ def get_channel_messages(channel_id):
         return response.json()
     else:
         return None
-
-# Replace <CHANNEL_ID_HERE> with the actual ID of the Discord channel you want to retrieve messages from
-channel_id = input("What Channel should we get the messages from?")
+channel_id = input("What Channel should we get the messages from? ")
 messages = get_channel_messages(channel_id)
 if messages:
     print("Messages in this channel:")
-    for message in messages:
+    for message in reversed(messages):
         user = get_user(message["author"]["id"])
         if user:
             print(f"Username: {user['username']}#{user['discriminator']}, Message: {message['content']}")
