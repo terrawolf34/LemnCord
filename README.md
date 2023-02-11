@@ -12,3 +12,6 @@ to exit do CTRL-C
 
 # Can i see the source and use it?
 feel free to do so.
+
+# Why?
+the discord official app is cancer,and it takes too many resources for me,so why not do a 10x lighter,more platform friendly(and less user friendly :gene:) app!
