@@ -1,4 +1,5 @@
 import os
+
 print("""╭╮╱╱╱╱╱╱╱╱╱╱╱╭━━━╮╱╱╱╱╱╱╭╮
 ┃┃╱╱╱╱╱╱╱╱╱╱╱┃╭━╮┃╱╱╱╱╱╱┃┃
 ┃┃╱╱╭━━┳╮╭┳━╮┃┃╱╰╋━━┳━┳━╯┃
@@ -9,76 +10,51 @@ root_directory = os.getcwd()
 client_directory = os.path.join(root_directory, "Packets/Client")
 server_directory = os.path.join(root_directory, "Packets/Server")
 
+def clientDir():
+    os.chdir(client_directory)
+
+def serverDir():
+    os.chdir(server_directory)
+
 while True:
     menu = input('Command list:\nSend message/dm message - send dm/message \nGet message - get (dm) 100 messages\nJoin server/leave server - join server/leave server\nGo online - go online\nServer list/Channel list/Dm list - get servers/channel list/dm list\nChange about me - change about me\nEnter command: ')
     if menu == 'send message':
-        os.chdir(client_directory)
+        clientDir()
         os.system('python3 send_message.py')
-        os.chdir(root_directory)
-    
-    if menu == 'get message':
-        os.chdir(server_directory)
+    elif menu == 'get message':
+        serverDir()
         os.system('python3 get_message.py')
-        os.chdir(root_directory)
-        
-    if menu == 'add reaction':
-    	os.chdir(client_directory)
+    elif menu == 'add reaction':
+    	clientDir()
     	os.system('python3 reactions.py')
-    	os.chdir(root_directory)
-        
-    if menu == 'join server':
-        os.chdir(server_directory)
+    elif menu == 'join server':
+        serverDir()
         os.system('python3 join_server.py')
-        os.chdir(root_directory)
-        
-    if menu == 'go online':
-        os.chdir(client_directory)
+    elif menu == 'go online':
+        clientDir()
         os.system('python3 online.py')
-        os.chdir(root_directory)
-        
-    if menu == 'dm message':
-        os.chdir(client_directory)
+    elif menu == 'dm message':
+        clientDir()
         os.system('python3 dm_message.py')
-        os.chdir(root_directory)
-        
-    if menu == 'leave server':
-    	os.chdir(server_directory)
+    elif menu == 'leave server':
+    	serverDir()
     	os.system('python3 leave_server.py')
-    	os.chdir(root_directory)
-    	
-    	
-    if menu == "srarki":
-    	os.chdir(client_directory)
+    elif menu == "srarki":
+    	clientDir()
     	os.system('python3 3.py')
-    	os.chdir(root_directory)
-    	
-    
-    if menu == "server list":
-        os.chdir(server_directory)
+    elif menu == "server list":
+        serverDir()
         os.system('python3 get_servers.py')
-        os.chdir(root_directory)
-        
-        
-    if menu == "channel list":
-        os.chdir(server_directory)
+    elif menu == "channel list":
+        serverDir()
         os.system('python3 get_channels.py')
-        os.chdir(root_directory)
-        
-    if menu == "upload file":
-        os.chdir(client_directory)
+    elif menu == "upload file":
+        clientDir()
         os.system('python3 file_upload.py')
-        os.chdir(root_directory)
-        
-    if menu == "change about me":
-        os.chdir(client_directory)
+    elif menu == "change about me":
+        clientDir()
         os.system('python3 change_status.py')
-        os.chdir(root_directory)
-        
-        
-    if menu == "dm list":
-        os.chdir(server_directory)
+    elif menu == "dm list":
+        serverDir()
         os.system('python3 get_dm.py')
-        os.chdir(root_directory)
-        
-        
-
+    os.chdir(root_directory)
