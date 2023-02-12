@@ -1,17 +1,17 @@
 # LemnCord
-uhh kind of a discord ""client"" written in python,doing this for learning pourposes,probably not gonna turn into something useful
+A Discord "client" written in Python. Made for educational purposes. Probably not gonna turn into something useful.
 
 # How to run
-pip install requests websocket_client
+Put your user token in `bruh.py`
 
-python3 menu.py
+`pip install requests websocket_client`
 
-you will also need to put usertoken in bruh.py !
+`python3 menu.py`
 
-to exit do CTRL-C
-
-# Can i see the source and use it?
-feel free to do so.
+To exit: CTRL+C
 
 # Why?
-the discord official app is cancer,and it takes too many resources for me,so why not do a 10x lighter,more platform friendly(and less user friendly :gene:) app!
+The Official Discord app is bad. It wastes ram. Why not do a lighter and more platform friendly (less user friendly 😬) app?
+
+# Can I see the source and use it?
+Yes.
