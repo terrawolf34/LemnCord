@@ -58,3 +58,8 @@ while True:
         serverDir()
         os.system('python3 get_dm.py')
     os.chdir(root_directory)
+    
+    if menu == 'create guild':
+        os.chdir(server_directory)
+        os.system('python3 create_guild.py')
+        os.chdir(root_directory)    
