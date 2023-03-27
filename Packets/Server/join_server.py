@@ -1,8 +1,11 @@
 import requests
 import sys
 sys.path.append("../..")
-from bruh import token
+from token import token
 
+print('''If you don't have a phone number in your discord account
+that is, there is a high chance that your account will be blocked and request your phone number!
+Be careful with this! I warned you''')
  
 def join(token, server_invite):
     header = {"authorization": token}
