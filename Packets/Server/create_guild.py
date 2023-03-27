@@ -1,7 +1,7 @@
 import requests
 import sys
 sys.path.append("../..")
-from bruh import token
+from token import token
 tokenizor = token
 guild_name = input("guild name? ")
 
