@@ -2,7 +2,7 @@ import requests
 import json
 import sys
 sys.path.append("../..")
-from bruh import token
+from token import token
 
 
 
