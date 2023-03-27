@@ -5,8 +5,7 @@ import requests
 import os
 import sys
 sys.path.append("../..")
-from bruh import token
-
+from token import token
 
 
 status = "online"
