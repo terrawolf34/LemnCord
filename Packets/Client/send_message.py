@@ -1,7 +1,7 @@
 import requests
 import sys
 sys.path.append("../..")
-from bruh import token
+from token import token
 
 channel_id = input("channel id?")
 url = f'https://discord.com/api/v9/channels/{channel_id}/messages'
