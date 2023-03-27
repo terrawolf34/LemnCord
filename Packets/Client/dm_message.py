@@ -1,7 +1,7 @@
 import requests
 import sys
 sys.path.append("../..")
-from bruh import token
+from token import token
 
 def sendMessage(token, channel_id, message):
     url = 'https://discord.com/api/v8/channels/{}/messages'.format(channel_id)
