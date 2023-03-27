@@ -1,7 +1,7 @@
 import requests #https://discord.com/api/v9/users/@me/affinities/guilds
 import sys
 sys.path.append("../..")
-from bruh import token
+from token import token
 import os
 # Replace <YOUR_TOKEN_HERE> with your actual Discord user token
 headers = {
